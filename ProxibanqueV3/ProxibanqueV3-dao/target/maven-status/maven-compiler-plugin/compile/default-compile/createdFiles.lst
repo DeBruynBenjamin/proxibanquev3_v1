@@ -1,0 +1,5 @@
+fr\proxibanque\proxibanquev3\dao\ClientDao.class
+fr\proxibanque\proxibanquev3\dao\ConseillerDao.class
+fr\proxibanque\proxibanquev3\dao\CompteDao.class
+fr\proxibanque\proxibanquev3\dao\VirementDao.class
+fr\proxibanque\proxibanquev3\dao\Dao.class
