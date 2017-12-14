@@ -1,0 +1,124 @@
+	.navbar-brand {
+	  padding: 0px;
+	}
+	.navbar-brand>img {
+	  height: 100%;
+	  width: auto;
+	  padding: 7px 15px;
+	}
+  
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {
+		height:1000px;
+	}
+    
+    /* Set background color and 100% height */
+    .sidenav {
+      /*background-color: #A83131;*/
+      background:url('../img/image_banque.jpg') scroll;
+      background-size: 510%;
+      height: 100%;
+	  padding-top:175px;
+	  color: white;	  
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+	
+	.form-group {
+		width:50%;
+		min-width:250px;
+	}
+	
+	.row {
+		margin-top:20px;
+	}
+	
+	body {
+		background-color:#ECECEC;
+	}
+	
+	.col-sm-10 {
+		padding-left:80px;	
+		white-space: nowrap;
+	}
+	
+	.tomove {
+		animation: move 0.5s;
+		-webkit-animation: move 0.5s;	
+		-moz-animation: move 0.5s;
+	}	
+	
+	hr {
+		border-color: black;
+	}
+	
+	td.vcenter {
+		vertical-align: middle;
+	}
+	
+	.retour {
+		background-color:#8B2B2B;
+		border-color:#8B2B2B;
+	}	
+	
+	    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding-bottom: 10px;
+		padding-top: 2px;
+		margin-top:0;
+		margin-left:0;
+      }
+      .row.content {height: auto;} 
+	  
+	  .col-sm-10{
+		 white-space: normal; 
+	  } 
+
+	  .tomove {
+		animation: initial;
+		-webkit-animation: initial;		
+		-moz-animation: initial;
+	  }
+	  
+	  	.form-group {
+		  width:100%;
+		} 
+	  
+    }
+	
+	@keyframes move {
+  from {
+    padding-left: 80%; 
+  }
+
+  to {
+    padding-left: 80px;
+  }	
+}
+
+@-webkit-keyframes move {
+  from {
+    padding-left: 80%;
+  }
+
+  to {
+    padding-left: 80px;
+  }
+}
+
+@-moz-keyframes move {
+  from {
+    padding-left: 80%;
+  }
+
+  to {
+    padding-left: 80px;
+  }
+}
