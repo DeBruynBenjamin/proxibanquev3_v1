@@ -1,0 +1,6 @@
+fr\proxibanque\proxibanquev2\presentation\ViremtServlet.class
+fr\proxibanque\proxibanquev2\presentation\AccueilServlet.class
+fr\proxibanque\proxibanquev2\presentation\ComptesServlet.class
+fr\proxibanque\proxibanquev2\presentation\DeconnecterServlet.class
+fr\proxibanque\proxibanquev2\presentation\LoginServlet.class
+fr\proxibanque\proxibanquev2\presentation\ModifServlet.class
