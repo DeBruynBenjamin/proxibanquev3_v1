@@ -29,7 +29,7 @@ import java.util.List;
  * redirige par la suite l'utilisateur vers la page accueil.jsp où il pourra y observer les modifications
  * apportées.
  */
-@WebServlet("/ModifServlet")
+@WebServlet("/appli/modification")
 public class ModifServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

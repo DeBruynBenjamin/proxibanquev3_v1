@@ -28,7 +28,7 @@ import fr.proxibanque.proxibanquev3.service.VirementService;
  * redirige par l'utilisateur vers la page accueil.jsp avec un message de validation du virement.
  * Si le virement n'est pas possible, l'utilisateur est renvoyé vers une page d'erreur.
  */
-@WebServlet("/ViremtServlet")
+@WebServlet("/appli/virement")
 public class ViremtServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

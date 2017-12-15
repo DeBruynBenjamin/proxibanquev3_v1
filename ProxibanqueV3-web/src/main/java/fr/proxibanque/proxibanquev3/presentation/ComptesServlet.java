@@ -19,7 +19,7 @@ import fr.proxibanque.proxibanquev3.domaine.Conseiller;
 /**
  * Servlet implementation class ComptesServlet
  */
-@WebServlet("/ComptesServlet")
+@WebServlet("/appli/comptes")
 public class ComptesServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

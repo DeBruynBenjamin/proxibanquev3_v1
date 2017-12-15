@@ -32,7 +32,7 @@ import fr.proxibanque.proxibanquev3.service.CompteService;
  * "comptesClient.jsp". Cette servlet est donc un pont entre la page accueil.jsp
  * et les autres pages de l'application.
  */
-@WebServlet("/AccueilServlet")
+@WebServlet("/appli/accueil")
 public class AccueilServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -122,9 +122,8 @@ public class AccueilServlet extends HttpServlet {
 					maSession.setAttribute("cli", clientEnSession);
 				}
 			} catch (NullPointerException npe) {
-				maSession.setAttribute("erreur",
-						"Erreur : un problème est survenu avec le client. Veuillez recommencer.");
-				dispatcher = request.getRequestDispatcher("erreur.jsp");
+				maSession.setAttribute("erreur", "Un soucis interne a été identifié. Veuillez-vous reconnecter.");
+				dispatcher = request.getRequestDispatcher(request.getContextPath()+"/erreur.jsp");
 			}
 
 			// Redirection de l'utilisateur :

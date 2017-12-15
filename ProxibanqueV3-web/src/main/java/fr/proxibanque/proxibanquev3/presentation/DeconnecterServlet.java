@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
  * Cette servlet est appelée lorsque l'utilisateur clique sur "se Déconnecter". Elle permet de supprimer
  * le client et le conseiller en session, et redirige ensuite vers la page de login.
  */
-@WebServlet("/DeconnecterServlet")
+@WebServlet("/deconnexion")
 public class DeconnecterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -51,11 +51,14 @@ public class DeconnecterServlet extends HttpServlet {
 		
 		HttpSession maSession = request.getSession();
 		if (maSession != null) {
-			maSession.invalidate();
+
+			request.logout();
 		}
 
+	
+		
 		RequestDispatcher dispatcher;
-		dispatcher = request.getRequestDispatcher("index.jsp");
+		dispatcher = request.getRequestDispatcher("Redirection.jsp");
 		dispatcher.forward(request, response);
 
 	}

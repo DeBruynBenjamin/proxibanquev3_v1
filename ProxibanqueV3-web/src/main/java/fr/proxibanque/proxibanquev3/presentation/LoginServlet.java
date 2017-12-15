@@ -21,7 +21,7 @@ import fr.proxibanque.proxibanquev3.service.ConseillerService;
  * Si le mot de passe est correct, le conseiller est mis en session et l'utilisateur est redirigé vers la page
  * accueil.jsp.
  */
-@WebServlet("/login")
+@WebServlet("/appli/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -61,19 +61,30 @@ public class LoginServlet extends HttpServlet {
 		HttpSession maSession = request.getSession();
 		maSession.setAttribute("erreur", null);
 		
-		String login=request.getRemoteUser();
+		String login=request.getParameter("logincons");
+		String pwd=request.getParameter("mdpcons");
+		Conseiller cons = new Conseiller(login,pwd);
+		AuthService as = new AuthService();
 		ConseillerService consServ = new ConseillerService();
 		
 		RequestDispatcher dispatcher;
 		
-		
+		if (as.authOK(cons)) {
+			try {
 				Conseiller consEnSession = consServ.getConsByLogin(login);
 				maSession.setAttribute("cons", consEnSession);
-				maSession.setAttribute("connecte", "ConnexionOK");
 				dispatcher=request.getRequestDispatcher("accueil.jsp");
-
+			}catch (NullPointerException npe) {
+				maSession.setAttribute("erreur", "Erreur : un problème est survenu sur votre session. Veuillez vous reconnecter.");
+				dispatcher = request.getRequestDispatcher("erreur.jsp");
+			}
+		}
+		else {
+			maSession.setAttribute("erreur", "Erreur");
+			dispatcher = request.getRequestDispatcher("loginBis.jsp");
+		}
 		
 		dispatcher.forward(request, response);
-		
+	
 	}
 }

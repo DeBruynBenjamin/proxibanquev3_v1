@@ -29,8 +29,7 @@
       </div>
       <div id="navbar2" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="accueil.jsp">Accueil</a></li>
-          <li><a href="DeconnecterServlet">Se déconnecter<span class="glyphicon glyphicon-log-out"></span></a></li>
+          <li><a href="deconnexion">Se déconnecter<span class="glyphicon glyphicon-log-out"></span></a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -42,19 +41,19 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-2 sidenav">
-	<img src="img/logo2.png" alt="Proxibanque" width="100%" margi>
-	<center><h4>Bonjour, <c:out value= "${cons.prenomCons}"/> <c:out value= "${cons.nomCons}"/> </h4></	center>	
+	<img src="img/logo2.png" alt="Proxibanque" width="100%">
     </div>
 
     <div class="col-sm-10 tomove">
-		<br>
-	  <h2>Erreur</h2>
+		<div class="jumbotron">
+		    <h1>ERREUR</h1>      
+	  	</div>
       <br>	
-	  <p>L'opération que vous avez demandé a mené à  l'erreur suivante :</p>
+	  <p>L'opération que vous avez demandée a mené à  l'erreur suivante :</p>
 	  <br>	
 		<h4><c:out value="${erreur}"/> </h4>
 		<br><br>
-		<p>Pour revenir à  l'accueil, cliquez <a href="accueil.jsp">ici</a>.</p>
+		<p>Veuillez-vous reconnecter en cliquant <a href="deconnexion">ici</a>.</p>
     </div>
   </div>	
 </div>
